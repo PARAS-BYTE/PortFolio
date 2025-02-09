@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+/* "Itim", serif */
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+/* "Langar", serif */
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+/* "Jura", serif  */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+/* "Karla", serif */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+:root{
+    --main-color :black;
+    --one-color:#111;
+    --mid-color :#808080;
+    --second-color:#D9D9D9;
+    --third-color : #87CEEB;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--one-color);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--mid-color);
+}
+body{
+background-color: var(--main-color);
+cursor: none;
+
+}
+#main{
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    border-top: 1px solid var(--second-color);
+    border-left: 1px solid var(--second-color);
+    border-right: 1px solid var(--second-color);
+    height: inherit;
+}
+.overlay{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--main-color);
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 100px;
+    justify-content: space-evenly;
+    color: var(--second-color);
+    /* display: none;  */
+    /* Blockk me when Needed */
+}
+.overlay .one{
+    display: flex;
+}
+.overlay .one .p1{
+    height: 50%;
+    width: 160px;
+    overflow: hidden;
+    text-align: end;
+    
+}
+.overlay .one .p1 span{
+    
+    display: block;
+    /* transform: translateY(-50%); */
+    
+}
+.overlay .one .p2{
+
+    color: var(--mid-color);
+}
+.progress{
+    width: 100px;
+    height: 10px;
+
+}
+
+
+.circle{
+    height: 30px;
+    width: 30px;
+    /* background-color: white; */
+    position: fixed;
+    display: flex;
+    border: 2px solid var(--second-color);
+    border-radius: 50%;
+    z-index: 6;
+
+}
+.circle .cir{
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    
+    background-color: var(--mid-color);
+}
+nav{
+    width: 100%;
+    z-index: 1;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.575);
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    font-family: "Itim", serif;
+    font-size: 1.2rem;
+}
+
+nav  a{
+    height: auto;
+    width: auto;
+    text-decoration: none;
+    color: var(--second-color);
+    /* cursor: none; */
+    position: relative;
+}
+nav a:hover{
+    color: var(--second-color);
+}
+nav a::before{
+    content:'';
+    position: absolute;
+    left: 0px;
+    background-color: var(--second-color);
+    bottom: 0px;
+    height: 2px;
+    transition: 400ms ease-in-out;
+    width: 100%;
+    transform: scaleX(0);
+   opacity: 0; 
+}
+nav a:hover::before{
+    transform: scaleX(1);
+   opacity: 1;
+}
+#main .class{
+    display: flex;
+    flex-direction: column;
+    color: var(--second-color);
+    font-family: "Karla", serif;
+
+}
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    
+    height: 100vh;
+    justify-content: space-between;
+}
+#main .class h2,h3{
+    
+    font-family: "Langar", serif;
+}
+#main .one{
+    height: 250px;
+    width: 250px;
+    margin-right: 10%;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+}
+
+#main .one>img{
+    height: 94%;
+    width: 94%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#main1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main1 #some{
+    width: 95%;
+    color: var(--second-color);
+    height: 100%;
+    margin :auto;
+    border-left: 1px solid var(--second-color);
+    border-right: 1px solid var(--second-color);
+    overflow: hidden;
+
+    
+}
+.hi{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transform: translateX(0%);
+}
+#main1 #some .page1,.page2,.page3{
+    min-height: 100%;
+    min-width: 100%;
+    
+}
+.page1 .box{
+    background :linear-gradient(to left,black,rgb(48, 41, 41),rgb(37, 31, 31));
+    height: 90%;
+    width: 90%;
+    /* background-color: var(--second-color); */
+    border-radius: 20px;
+    display:flex;
+    justify-content: end;
+    align-items: center;
+
+    
+}
+/* .page1 .box video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: opacity(0.6) grayscale(100%);
+    
+    position: absolute;
+    
+} */
+.page1 .box .anima{
+    /* position: absolute; */
+    height: 450px;
+    background-color: var(--third-color);
+    width: 400px;
+    border-radius: 40px;
+    position: relative;
+}
+.page1 .box .anima .one{
+    height: 100%;
+    width: 100%;
+    background-color: var(--third-color);
+    border-radius: 30px;
+text-align: center;
+font-size: 1.2rem;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--one-color);
+position: absolute;
+z-index: 5;
+font-family: "Langar", serif;
+}
+.page1 .box .anima .two{
+    height: 100%;
+    width: 100%;
+    
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+.page1 .box .anima .two p{
+    height :50px;
+    width:  300px;
+    font-family: "Jura", serif ;
+    font-weight: 800;
+    padding: 20px;
+    margin-left: 10px;
+    color: var(--second-color);
+    border-radius :20px  ;
+    background-color: pink;
+    transition: 2s ease-in-out;
+    transform: translateX(-190);
+}
+
+.page1 .box .anima .two img{
+    height: 70px;
+    width: 70px;
+    transition: 2s ease-in-out;
+    position: absolute;
+} 
+.page2 p{
+    height: 10%;
+    width: 100%;
+    padding: 10px 60px ;
+    
+    font-family: "Itim", serif;
+}
+.page2 .boxex{
+    height: 86%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    
+}
+.boxex .box1,.box2{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.box1 .para ,.box2 .para{
+    width: 500px;
+    height: 100%;
+    color: var(--second-color);
+    opacity: 0;
+    /* border: 1px solid blue; */
+    
+    /* background-color: pink; */
+
+}
+.box1 .boxi ,.box2 .boxi{
+    width: 500px;
+    height: 100%;
+    background-color: var(--second-color);
+    border-radius: 20px;
+    margin-right: 10px;
+    color: var(--one-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.images{
+    position: relative;
+}
+.boxi p{
+    font-family:"Karla", serif ;
+
+    height: 100px;
+    width: 100%;
+}
+.boxi div{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.boxi .div{
+    justify-content: start;
+    margin-left: 20px;
+}
+.boxi button{
+    height: 40px;
+    width: 100px;
+    border:  none;
+    background-color: var(--mid-color);
+    border-radius: 20px;
+    color: var(--second-color);    
+    margin-right: 20px;
+    font-family: "Jura",serif;
+}
+.page3{
+    display: flex;
+    align-items: end;
+    
+}
+.page3 .box{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page3 .right{
+    display: flex;
+    flex-direction: column;
+}
+.page3 a{
+    text-decoration: none;
+    color: var(--second-color);
+}
+.color{
+    position: fixed;
+    left: -60px;
+    cursor: pointer;
+    z-index: 4;
+    bottom: 120px;
+    transform: rotate(-90deg);
+    color: var(--second-color);
+}
+.page3 img{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+/* .page3 ./ */
+.page3 h1{
+    color: var(--mid-color);
+}
+@media (max-width :1000px) {
+    .images{
+        display: none;
+    }
+    .boxex .para{
+        display: none;
+    }
+    .boxex{
+        gap: 20px;
+    }
+    .boxi .div{
+        display: none;
+    }
+}
+@media (max-width:700px) {
+    .circle{
+        display: none;
+    }
+    #main .one{
+            margin-left: 10%;
+
+    }
+    .page1 .box .anima .one{
+        font-size: 0.9rem;
+    }
+    .page1 .box .anima .two p{
+        width: 150px;
+    }
+    body{
+        cursor: auto;
+    }
+    #main{
+        width: 90%;
+        justify-content: start;
+        align-items: start;
+    }
+    #main1{
+        width: 94.9%;
+        margin: auto;
+    }
+    .boxex .boxi{
+        
+         width: 80%;
+    }
+    
+    
+}
